@@ -1,0 +1,25 @@
+{
+  "name": "friend_finder",
+  "version": "1.0.0",
+  "description": "App for matching with facebook friends",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgtalbot/FriendFinder.git"
+  },
+  "author": "Ryan Talbot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rgtalbot/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/rgtalbot/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "path": "^0.12.7"
+  }
+}
