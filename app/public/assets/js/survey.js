@@ -25,9 +25,25 @@ $("#submit").on('click', function () {
         var currentURL = window.location.origin;
 
         //AJAX post to API
-        $.post(currentURL + "/api/frineds", userData, function (data) {
+        $.ajax({
+            type: 'POST',
+            url: currentURL + '/api/friends',
+            dataType: 'json',
+            data: userData,
+            success: function(data) {
+                // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                $("#matchName").text(data.name);
+                $('#matchImg').attr("src", data.photo);
+                console.log(data.name);
+                console.log(data.photo);
 
-        })
+                // Show the modal with the best match
+                $("#resultsModal").modal('toggle');
+            },
+            error: function() {
+                console.log('AJAX ERROR');
+            }
+        });
     } else {
         alert("Please fill out form entirely");
     }

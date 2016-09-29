@@ -14,6 +14,22 @@ var friendArray = [
             "4",
             "1"
         ]
+    },
+    {
+        name: "Ronnie",
+        photo: "https://www.gravatar.com/avatar/6af04075ae54d0a21c88aa9f5a2d1a8f?s=328&d=identicon&r=PG",
+        scores: [
+            "3",
+            "2",
+            "3",
+            "2",
+            "3",
+            "4",
+            "5",
+            "2",
+            "1",
+            "3"
+        ]
     }
 ];
 

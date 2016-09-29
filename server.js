@@ -13,11 +13,13 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 
+app.use(express.static(path.join(__dirname, 'app/public/')));
+
 //ROUTING FILES
 require('./app/routing/api-routes.js')(app);
 require('./app/routing/html-routes.js')(app);
 
-app.use(express.static('public'));
+
 
 //LISTENER
 app.listen(PORT, function() {
